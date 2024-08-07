@@ -44,19 +44,23 @@ class GreetingPage extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           Image.network(
-            'https://flutter.dev/images/flutter-logo-sharing.png',
+            'https://storage.googleapis.com/cms-storage-bucket/0dbfcc7a59cd1cf16282.png',
             height: 100,
           ),
           const SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {
-              const snackBar = SnackBar(content: Text('Button Pressed!'));
-              ScaffoldMessenger.of(context).showSnackBar(snackBar);
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text('Button Pressed!'),
+                ),
+              );
             },
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.green,
+                backgroundColor: Colors.green, foregroundColor: Colors.white),
+            child: const Text(
+              'Press Me',
             ),
-            child: const Text('Press Me'),
           ),
         ],
       ),
